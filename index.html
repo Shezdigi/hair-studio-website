@@ -1,0 +1,683 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Jenny's Hair Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Jenny's Hair Studio in Banaswadi, Bengaluru. Professional haircuts and expert hair coloring. Rated 5.0 from 96 Google reviews. Call or get directions.">
+<meta name="theme-color" content="#F5F0F9">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jenny's Hair Studio | Hairdresser in Banaswadi, Bengaluru">
+<meta property="og:description" content="Professional haircuts and expert hair coloring. Rated 5.0 from 96 Google reviews.">
+<meta property="og:image" content="og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%231E1626'/%3E%3Cpath d='M30 8V28C30 38 24 42 18 40C12 38 12 30 19 30C24 30 25 36 21 37' fill='none' stroke='%23E08A5B' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600&family=Young+Serif&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Jenny's Hair Studio","description":"Welcoming hair studio specializing in professional haircuts and expert hair coloring.","telephone":"+918296275406","address":{"@type":"PostalAddress","streetAddress":"2nd Cross Rd, near Raghavendra Temple, Erappa Reddy Layout, Balaji Layout, Banaswadi","addressLocality":"Bengaluru","addressRegion":"Karnataka","postalCode":"560043","addressCountry":"IN"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"96","bestRating":"5"}}
+</script>
+<style>
+/* Layout concept: a bright lilac studio wall; copper and plum hair strands drift in three depths behind a left-aligned wordmark, then the page reads as a short service, review and visit sheet. Single committed light look. */
+:root {
+  --bg: #F5F0F9;
+  --card: #FFFFFF;
+  --card-2: #ECE3F4;
+  --ink: #1E1626;
+  --muted: #5E5070;
+  --line: #D8CBE4;
+  --copper: #D9743F;
+  --copper-deep: #A64416;
+  --rose: #D9758F;
+  --plum: #7A56A0;
+  --font-display: "Young Serif", "Iowan Old Style", Georgia, serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+  position: relative;
+  isolation: isolate;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 68rem; margin-inline: auto; }
+.mono { font-family: var(--font-mono); font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* Shiny background: pearly gradient wash, a slow light sweep and a few twinkling glints */
+.sheen { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+  background:
+    radial-gradient(48rem 32rem at 8% -6%, rgba(255,205,228,.75), transparent 62%),
+    radial-gradient(44rem 30rem at 100% 12%, rgba(204,190,255,.7), transparent 62%),
+    radial-gradient(52rem 34rem at 30% 108%, rgba(255,222,196,.7), transparent 62%),
+    linear-gradient(160deg, #FBF8FF 0%, #F1E9FA 45%, #FBEFF3 100%); }
+.sheen::after { content: ""; position: absolute; top: -10%; bottom: -10%; left: 0; width: 55%;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 45%, rgba(255,232,242,.5) 55%, rgba(255,255,255,0) 100%);
+  transform: translateX(-120%) skewX(-16deg); animation: sweep 12s ease-in-out infinite; will-change: transform; }
+@keyframes sweep { 0%, 40% { transform: translateX(-120%) skewX(-16deg); } 100% { transform: translateX(260%) skewX(-16deg); } }
+.spark { position: absolute; left: var(--x); top: var(--y); width: var(--s, 14px); height: var(--s, 14px); opacity: 0;
+  background: radial-gradient(circle, #fff 0 20%, #F2A98A 21% 100%);
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  animation: twinkle 6s ease-in-out infinite; animation-delay: var(--d); }
+@keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); } 50% { opacity: .9; transform: scale(1) rotate(45deg); } }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  h1 em, .big { background: linear-gradient(100deg, #A64416 0%, #D9743F 35%, #F3B28C 50%, #D9743F 65%, #A64416 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: shimmer 7s linear infinite; }
+}
+@keyframes shimmer { from { background-position: 150% 0; } to { background-position: -100% 0; } }
+.score, .quotes blockquote { background: linear-gradient(180deg, #FFFFFF 0%, #FBF7FE 100%); box-shadow: inset 0 1px 0 #fff, 0 14px 32px -20px rgba(122,86,160,.4); }
+.btn { position: relative; overflow: hidden; background: linear-gradient(135deg, #EFA27A 0%, #D9743F 55%, #E58A5A 100%); }
+.btn::after { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.6), transparent); transform: skewX(-18deg); transition: left .6s ease; pointer-events: none; }
+.btn:hover::after { left: 130%; }
+.btn.wa { background: linear-gradient(135deg, #6CEBA2 0%, #25D366 60%, #1FBF5B 100%); }
+.btn.wa:hover { background: #3BE07A; }
+.wa-fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: grid; place-items: center; text-decoration: none; color: var(--ink); background: linear-gradient(135deg, #6CEBA2 0%, #25D366 60%, #1FBF5B 100%); box-shadow: 0 10px 24px -8px rgba(18,140,70,.6), inset 0 1px 0 rgba(255,255,255,.6); }
+.wa-fab::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25D366; animation: ring 2.8s ease-out infinite; }
+.wa-fab svg { width: 1.7rem; height: 1.7rem; }
+@keyframes ring { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.7); opacity: 0; } }
+
+/* Booking */
+.book { background: linear-gradient(180deg, #FFFFFF 0%, #FBF7FE 100%); border: 1px solid var(--line); border-radius: 1.5rem; padding: clamp(1.25rem, 4vw, 2.25rem); box-shadow: inset 0 1px 0 #fff, 0 14px 32px -20px rgba(122,86,160,.4); display: grid; gap: 1.75rem; }
+.book fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.book legend { padding: 0; margin-bottom: .75rem; }
+.choices { display: flex; flex-wrap: wrap; gap: .6rem; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choice span { display: inline-block; padding: .55rem 1.1rem; border-radius: 999px; background: #fff; border: 1px solid #C9B9DA; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.choice input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
+.choice input:focus-visible + span { outline: 2px solid var(--plum); outline-offset: 3px; }
+.days { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(6.4rem, 1fr); gap: .6rem; overflow-x: auto; padding-bottom: .5rem; }
+.day { display: flex; flex-direction: column; align-items: flex-start; gap: .1rem; padding: .7rem .9rem; border-radius: 1rem; background: #fff; border: 1px solid #C9B9DA; cursor: pointer; font: 500 1rem/1.25 var(--font-body); color: var(--ink); text-align: left; }
+.day small { font: 500 .72rem/1.2 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.day[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.day[aria-pressed="true"] small { color: #E3D8EE; }
+.day:disabled { background: #E7E3EC; border-style: dashed; border-color: #C4BCCC; color: #6F6580; cursor: not-allowed; }
+.slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(7.2rem, 1fr)); gap: .6rem; }
+.slot { min-height: 3.25rem; border-radius: .9rem; border: 1px solid #C9B9DA; background: #fff; color: var(--ink); font: 500 1rem/1.2 var(--font-body); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .1rem; transition: transform .2s ease, background .2s ease; font-variant-numeric: tabular-nums; }
+.slot:hover:not(:disabled) { transform: translateY(-2px); border-color: var(--copper-deep); }
+.slot small { font: 500 .68rem/1.1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.slot[aria-pressed="true"] { background: var(--copper); border-color: var(--copper-deep); }
+.slot:disabled { background: #E7E3EC; border: 1px dashed #C4BCCC; color: #6F6580; cursor: not-allowed; }
+.slot:disabled .t { text-decoration: line-through; }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 1rem 0 0; padding: 0; list-style: none; font-size: .88rem; color: var(--muted); }
+.legend i { display: inline-block; width: .85rem; height: .85rem; border-radius: .25rem; margin-right: .4rem; vertical-align: -.1rem; border: 1px solid #C9B9DA; background: #fff; }
+.legend .l-sel { background: var(--copper); border-color: var(--copper-deep); }
+.legend .l-off { background: #E7E3EC; border: 1px dashed #C4BCCC; }
+.book-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 1.5rem; align-items: end; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.book-form > * { min-width: 0; }
+.field label { display: block; margin-bottom: .4rem; }
+.field input { width: 100%; min-height: 3rem; padding: .6rem 1rem; border-radius: .9rem; border: 1px solid #C9B9DA; background: #fff; color: var(--ink); font: 400 1.0625rem var(--font-body); }
+.field input:focus-visible { outline: 2px solid var(--plum); outline-offset: 2px; }
+.sum { grid-column: 1 / -1; font: 400 1.25rem/1.4 var(--font-display); margin: 0; }
+.sum.empty { color: var(--muted); font-family: var(--font-body); font-size: 1rem; }
+.btn[aria-disabled="true"] { opacity: .45; filter: grayscale(.7); pointer-events: none; }
+.book-note { margin: 0; color: var(--muted); font-size: .92rem; grid-column: 1 / -1; }
+@media (max-width: 720px) { .book-form { grid-template-columns: minmax(0, 1fr); } }
+
+/* Top bar */
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; position: relative; z-index: 3; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font-family: var(--font-display); font-size: 1.25rem; }
+.brand svg { width: 2rem; height: 2rem; flex: none; }
+.bar nav { display: flex; gap: 1.25rem; }
+.bar nav a { text-decoration: none; color: var(--muted); font-size: .95rem; }
+.bar nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { position: relative; isolation: isolate; }
+.hero-art { position: absolute; inset: 0 calc(50% - 50vw); z-index: -1; overflow: hidden; pointer-events: none; }
+.hero-art canvas { position: absolute; left: 0; top: -12%; width: 100%; height: 124%; will-change: transform; }
+.hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(245,240,249,.62) 0%, rgba(245,240,249,.3) 55%, rgba(245,240,249,0) 100%), linear-gradient(0deg, rgba(245,240,249,.7) 0%, rgba(245,240,249,0) 26%); }
+.hero-copy { padding-block: clamp(4.5rem, 13vh, 8.5rem) clamp(4rem, 10vh, 6.5rem); max-width: 42rem; will-change: transform; }
+h1 { font: 400 clamp(3rem, 10vw, 6.5rem)/.98 var(--font-display); margin: 1rem 0 1.5rem; text-wrap: balance; letter-spacing: -.01em; }
+h1 em { font-style: normal; color: var(--copper-deep); }
+.lede { font-size: clamp(1.1rem, 2.4vw, 1.3rem); color: var(--ink); max-width: 32rem; margin: 0 0 2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: .6rem; min-height: 3rem; padding: .7rem 1.4rem; border-radius: 999px; background: var(--copper); color: var(--ink); font: 600 1.0625rem/1.2 var(--font-body); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .25s ease, background .25s ease; }
+.btn:hover { background: #E58FA3; transform: translateY(-2px); }
+.btn.ghost { background: rgba(255,255,255,.55); color: var(--ink); border-color: #BFAED0; }
+.btn.ghost:hover { border-color: var(--plum); background: #fff; }
+.chip { display: inline-flex; align-items: baseline; gap: .5rem; font-family: var(--font-mono); font-size: .8125rem; letter-spacing: .08em; color: var(--muted); }
+.chip b { font: 400 1.5rem/1 var(--font-display); color: var(--ink); letter-spacing: 0; }
+
+/* Sections */
+section { padding-block: clamp(3.5rem, 9vw, 6rem); }
+h2 { font: 400 clamp(2rem, 5.5vw, 3.25rem)/1.05 var(--font-display); margin: .6rem 0 0; text-wrap: balance; }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.split > * { min-width: 0; }
+
+.services { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.services li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.25rem; align-items: center; padding-block: 1.6rem; border-top: 1px solid var(--line); transition: transform .35s ease; }
+.services li:last-child { border-bottom: 1px solid var(--line); }
+.services li:hover { transform: translateX(.5rem); }
+.services svg { width: 3.5rem; height: 3.5rem; }
+.services strong { display: block; font: 400 clamp(1.5rem, 4vw, 2.1rem)/1.1 var(--font-display); }
+.services span { color: var(--muted); font-size: .98rem; }
+.note { color: var(--muted); margin: 1.5rem 0 0; font-size: .98rem; }
+
+.styles-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .75rem 2rem; margin-bottom: 2.25rem; }
+.styles-head p { margin: 0; max-width: 26rem; color: var(--muted); font-size: .98rem; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.75rem, 2vw, 1.5rem); align-items: start; padding-bottom: 3rem; }
+.shot { margin: 0; position: relative; border-radius: 1.25rem; overflow: hidden; background: var(--card-2); will-change: transform; }
+.shot img { display: block; width: 100%; height: auto; transform-origin: 50% 40%; animation: drift 16s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -3s); transition: filter .4s ease; }
+.shot:hover img { filter: brightness(1.06) saturate(1.08); }
+.shot figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem .9rem .8rem; font-family: var(--font-mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: #fff; background: linear-gradient(0deg, rgba(30,22,38,.78), rgba(30,22,38,0)); pointer-events: none; }
+.shot:nth-child(3n+2) { margin-top: clamp(1.5rem, 5vw, 3.5rem); }
+@keyframes drift { from { transform: scale(1) translate3d(0, 0, 0); } to { transform: scale(1.07) translate3d(-1.2%, -1%, 0); } }
+
+/* Reviews */
+.score { background: var(--card); border: 1px solid var(--line); border-radius: 1.5rem; padding: clamp(1.5rem, 4vw, 2.25rem); }
+.big { font: 400 clamp(5rem, 16vw, 8rem)/.85 var(--font-display); color: var(--copper-deep); }
+.stars { display: flex; gap: .2rem; margin: 1rem 0 .5rem; color: var(--copper); }
+.score p { margin: 0 0 1.25rem; color: var(--muted); }
+.topics { list-style: none; margin: 0 0 1.25rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.topics li { padding: .3rem .8rem; border-radius: 999px; background: var(--card-2); font-size: .9rem; }
+.topics b { font-family: var(--font-mono); font-weight: 500; color: var(--copper-deep); margin-left: .35rem; }
+.jd { font-size: .95rem; color: var(--muted); margin: 0; }
+.quotes { display: grid; gap: 1rem; }
+.quotes blockquote { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 1.25rem; padding: 1.5rem 1.5rem 1.25rem; }
+.quotes q { display: block; font: 400 clamp(1.1rem, 2.6vw, 1.3rem)/1.5 var(--font-display); quotes: "\201C" "\201D"; }
+.quotes cite { display: block; margin-top: .9rem; font-style: normal; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* Visit */
+address { font-style: normal; font-size: clamp(1.2rem, 3.2vw, 1.6rem); line-height: 1.4; font-family: var(--font-display); max-width: 28rem; margin: 1rem 0 1.75rem; }
+.copy-ok { min-height: 1.5rem; margin: .75rem 0 0; color: var(--copper-deep); font-size: .95rem; }
+.facts { margin: 0; display: grid; gap: 1.25rem; }
+.facts dt { margin-bottom: .2rem; }
+.facts dd { margin: 0; }
+.phone { font-family: var(--font-display); font-size: 1.5rem; }
+
+footer { border-top: 1px solid var(--line); padding-block: 2rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: flex-start; color: var(--muted); font-size: .92rem; }
+footer .brand { color: var(--ink); }
+footer p { margin: 0; max-width: 30rem; }
+
+@media (max-width: 720px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .bar nav a:not(.keep) { display: none; }
+  .hero-art::after { background: linear-gradient(0deg, rgba(245,240,249,.7) 0%, rgba(245,240,249,.4) 45%, rgba(245,240,249,.55) 100%); }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shot:nth-child(3n+2) { margin-top: 0; }
+  .shot:nth-child(2n) { margin-top: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sheen::after { animation: none; transform: translateX(60%) skewX(-16deg); will-change: auto; }
+  .spark { animation: none; opacity: .5; }
+  h1 em, .big { animation: none; background-position: 0 0; }
+  .btn::after { transition: none; }
+  .slot, .choice span { transition: none; }
+  .wa-fab::before { animation: none; display: none; }
+  .btn, .services li { transition: none; }
+  .hero-copy, .hero-art canvas, .shot { will-change: auto; }
+  .shot img { animation: none; transition: none; }
+}
+</style>
+
+<div class="sheen" aria-hidden="true">
+  <i class="spark" style="--x:8%;--y:14%;--s:16px;--d:0s"></i>
+  <i class="spark" style="--x:22%;--y:62%;--s:10px;--d:1.4s"></i>
+  <i class="spark" style="--x:37%;--y:28%;--s:12px;--d:2.8s"></i>
+  <i class="spark" style="--x:52%;--y:80%;--s:14px;--d:0.7s"></i>
+  <i class="spark" style="--x:64%;--y:12%;--s:10px;--d:3.6s"></i>
+  <i class="spark" style="--x:78%;--y:46%;--s:16px;--d:2.1s"></i>
+  <i class="spark" style="--x:90%;--y:72%;--s:12px;--d:4.4s"></i>
+  <i class="spark" style="--x:14%;--y:88%;--s:12px;--d:3.1s"></i>
+  <i class="spark" style="--x:46%;--y:48%;--s:9px;--d:5s"></i>
+  <i class="spark" style="--x:84%;--y:20%;--s:11px;--d:1.9s"></i>
+</div>
+
+<div class="wrap">
+  <header class="bar">
+    <a class="brand" href="#top" aria-label="Jenny's Hair Studio, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8V28C30 38 24 42 18 40C12 38 12 30 19 30C24 30 25 36 21 37" fill="none" stroke="#D9743F" stroke-width="3.6" stroke-linecap="round"/></svg>
+      <span>Jenny's Hair Studio</span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#reviews">Reviews</a>
+      <a class="keep" href="#visit">Visit</a>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-art" aria-hidden="true">
+      <canvas data-layer="0"></canvas>
+      <canvas data-layer="1"></canvas>
+      <canvas data-layer="2"></canvas>
+    </div>
+    <div class="hero-copy" id="heroCopy">
+      <div class="mono">Hairdresser · Banaswadi, Bengaluru</div>
+      <h1>Jenny's <em>Hair Studio</em></h1>
+      <p class="lede">Welcoming hair studio specializing in professional haircuts and expert hair coloring.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Book a slot</a>
+        <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jenny%27s+Hair+Studio%2C+2nd+Cross+Rd%2C+near+Raghavendra+Temple%2C+Erappa+Reddy+Layout%2C+Balaji+Layout%2C+Banaswadi%2C+Bengaluru+560043" target="_blank" rel="noopener">
+          Get directions
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn ghost" href="tel:+918296275406">Call 082962 75406</a>
+        <a class="btn wa" href="https://wa.me/918296275406?text=Hi%20Jenny%27s%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.6 2.9 5.2 5.5 5.5l1.4-1.4-2-1-1 .8c-.9-.4-1.9-1.4-2.3-2.3l.8-1-1-2z"/></svg> WhatsApp</a>
+        <span class="chip"><b>5.0</b> 96 Google reviews</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="wrap">
+    <div class="split">
+      <div>
+        <div class="mono">Services</div>
+        <h2>What the studio does</h2>
+        <p class="note">Prices and the full menu are not listed here. Call the studio to ask.</p>
+      </div>
+      <ul class="services">
+        <li>
+          <svg viewBox="0 0 56 56" fill="none" stroke="#D9743F" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 10L40 46"/><path d="M40 10L12 46"/><circle cx="12" cy="48" r="4.5"/><circle cx="40" cy="48" r="4.5"/></svg>
+          <div><strong>Haircuts</strong><span>Professional haircuts. Reviewers mention tailored cuts and pixie cuts.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 56 56" fill="none" stroke="#D9758F" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M10 14C22 6 34 22 46 14"/><path d="M10 28C22 20 34 36 46 28"/><path d="M10 42C22 34 34 50 46 42"/></svg>
+          <div><strong>Hair colouring</strong><span>Expert hair coloring, and the topic reviewers mention most.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 56 56" fill="none" stroke="#7A56A0" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M18 8a6 6 0 1 1 0 12a6 6 0 1 0 0 12a6 6 0 1 1 0 12a6 6 0 1 0 0 12"/><path d="M38 8a6 6 0 1 1 0 12a6 6 0 1 0 0 12a6 6 0 1 1 0 12a6 6 0 1 0 0 12"/></svg>
+          <div><strong>Thick, curly hair</strong><span>Mentioned in 5 reviews.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="book" class="wrap" style="padding-block-start:0" aria-labelledby="book-h">
+    <div class="styles-head">
+      <div>
+        <div class="mono">Book online</div>
+        <h2 id="book-h">Pick a time</h2>
+      </div>
+      <p>Choose a service, a day and a time, then send the request on WhatsApp. The time is yours once the studio confirms. Greyed times are taken or have passed.</p>
+    </div>
+    <div class="book">
+      <fieldset>
+        <legend class="mono">1. Service</legend>
+        <div class="choices" id="svcChoices">
+          <label class="choice"><input type="radio" name="svc" id="svc-cut" value="Haircut" checked><span>Haircut</span></label>
+          <label class="choice"><input type="radio" name="svc" id="svc-colour" value="Hair colouring"><span>Hair colouring</span></label>
+          <label class="choice"><input type="radio" name="svc" id="svc-curly" value="Curly hair cut"><span>Curly hair</span></label>
+          <label class="choice"><input type="radio" name="svc" id="svc-ask" value="a service (not sure yet)"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <div>
+        <div class="mono" id="dayLabel" style="margin-bottom:.75rem">2. Day</div>
+        <div class="days" id="days" role="group" aria-labelledby="dayLabel"></div>
+      </div>
+      <div>
+        <div class="mono" id="slotLabel" style="margin-bottom:.75rem">3. Time</div>
+        <div class="slots" id="slots" role="group" aria-labelledby="slotLabel"></div>
+        <ul class="legend" aria-hidden="true">
+          <li><i></i>Available</li>
+          <li><i class="l-sel"></i>Your choice</li>
+          <li><i class="l-off"></i>Booked or passed</li>
+        </ul>
+      </div>
+      <div class="book-form">
+        <p class="sum empty" id="sum" aria-live="polite">Pick a day and a time to continue.</p>
+        <div class="field">
+          <label class="mono" for="bkName">4. Your name</label>
+          <input id="bkName" name="name" type="text" autocomplete="name" placeholder="Your name">
+        </div>
+        <a class="btn wa" id="reqLink" href="#book" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.6 2.9 5.2 5.5 5.5l1.4-1.4-2-1-1 .8c-.9-.4-1.9-1.4-2.3-2.3l.8-1-1-2z"/></svg> Request on WhatsApp</a>
+        <p class="book-note">This opens WhatsApp with your request written out. Nothing is booked until the studio replies. You can also call 082962 75406.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="styles" class="wrap" style="padding-block-start:0" aria-labelledby="styles-h">
+    <div class="styles-head">
+      <div>
+        <div class="mono">Style inspiration</div>
+        <h2 id="styles-h">Looks to bring to your visit</h2>
+      </div>
+      <p>Reference photos of hairstyles, shown for inspiration. They are not necessarily the studio's own work, and this is not a list of services.</p>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure class="shot" data-depth="0.05" style="--i:0">
+        <img src="img/pearl-braid.webp" width="316" height="640" alt="Back view of a long braid threaded with pearls" loading="lazy" decoding="async">
+        <figcaption>Pearl braid</figcaption>
+      </figure>
+      <figure class="shot" data-depth="-0.04" style="--i:1">
+        <img src="img/bow-waves.webp" width="313" height="640" alt="Long wavy hair worn half up with a pink satin bow" loading="lazy" decoding="async">
+        <figcaption>Half-up waves</figcaption>
+      </figure>
+      <figure class="shot" data-depth="0.07" style="--i:2">
+        <img src="img/floral-bun.webp" width="316" height="640" alt="Sleek low bun with peach flowers pinned at the side" loading="lazy" decoding="async">
+        <figcaption>Low bun, flowers</figcaption>
+      </figure>
+      <figure class="shot" data-depth="-0.06" style="--i:3">
+        <img src="img/pearl-curls.webp" width="449" height="720" alt="Long brown curls with pearl pins at the crown" loading="lazy" decoding="async">
+        <figcaption>Soft curls, pearl pins</figcaption>
+      </figure>
+      <figure class="shot" data-depth="0.04" style="--i:4">
+        <img src="img/waterfall.webp" width="415" height="720" alt="Waterfall braid over loose blonde-highlighted waves" loading="lazy" decoding="async">
+        <figcaption>Waterfall braid</figcaption>
+      </figure>
+      <figure class="shot" data-depth="-0.05" style="--i:5">
+        <img src="img/gypsophila-bun.webp" width="407" height="720" alt="Twisted bun wrapped in baby's breath flowers" loading="lazy" decoding="async">
+        <figcaption>Twisted bun</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="reviews" class="wrap" style="padding-block-start:0" aria-labelledby="reviews-h">
+    <div class="split">
+      <div class="score">
+        <div class="mono">Google rating</div>
+        <div class="big" aria-hidden="true">5.0</div>
+        <div class="stars" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+        </div>
+        <h2 id="reviews-h" style="font-size:1.6rem;margin:0 0 .75rem">5.0 from 96 Google reviews</h2>
+        <p>Most mentioned in reviews:</p>
+        <ul class="topics">
+          <li>hair colour<b>7</b></li>
+          <li>thick curly hair<b>5</b></li>
+          <li>pixie cut<b>2</b></li>
+          <li>tailored haircut<b>2</b></li>
+        </ul>
+        <p class="jd">Also listed on Justdial, rated 4.9 from 76 ratings.</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <q>Hairstyling does make a difference to your entire personality. I was aware of it but never believed it would be ten fold after the magic Sonal did. An exceptionally passionate and humble hairdresser.</q>
+          <cite>Shilpa Dutta · Google review</cite>
+        </blockquote>
+        <blockquote>
+          <q>Such a warm, welcoming place. Sonal gave me a cut and color, and I'm very happy with the results. He was thorough, gave great suggestions on what color I should pick and was very skilled in his process.</q>
+          <cite>archana achal · Google review</cite>
+        </blockquote>
+        <blockquote>
+          <q>I had a very good experience at Jenny's… The ambience is very welcoming… Small and cosy… Just what I was looking for…</q>
+          <cite>jiju george · Google review</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="wrap">
+    <div class="split">
+      <div>
+        <div class="mono">Visit</div>
+        <h2>Find the studio</h2>
+      </div>
+      <div>
+        <address id="addr">Jenny's studio, 2nd Cross Rd,<br>near Raghavendra Temple,<br>Erappa Reddy Layout, Balaji Layout,<br>Banaswadi, Bengaluru, Karnataka 560043</address>
+        <div class="actions">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jenny%27s+Hair+Studio%2C+2nd+Cross+Rd%2C+near+Raghavendra+Temple%2C+Erappa+Reddy+Layout%2C+Balaji+Layout%2C+Banaswadi%2C+Bengaluru+560043" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Jenny%27s+Hair+Studio%2C+2nd+Cross+Rd%2C+near+Raghavendra+Temple%2C+Erappa+Reddy+Layout%2C+Balaji+Layout%2C+Banaswadi%2C+Bengaluru+560043" target="_blank" rel="noopener">Open in Maps</a>
+          <button class="btn ghost" type="button" data-copy="Jenny's Hair Studio, 2nd Cross Rd, near Raghavendra Temple, Erappa Reddy Layout, Balaji Layout, Banaswadi, Bengaluru, Karnataka 560043" data-label="Address" data-target="addr">Copy address</button>
+        </div>
+        <p class="copy-ok" id="copyOk" role="status" aria-live="polite"></p>
+        <dl class="facts">
+          <div>
+            <dt class="mono">Phone</dt>
+            <dd>
+              <span class="phone" id="phone">082962 75406</span>
+              <div class="actions" style="margin-top:.75rem">
+                <a class="btn" href="tel:+918296275406">Call now</a>
+                <button class="btn ghost" type="button" data-copy="082962 75406" data-label="Number" data-target="phone">Copy number</button>
+              </div>
+            </dd>
+          </div>
+          <div><dt class="mono">Hours</dt><dd>Monday: open, closes at 8 pm. Check the Google Maps listing for other days.</dd></div>
+          <div><dt class="mono">Message</dt><dd>Send a WhatsApp message to the same number to ask about services or book.<div class="actions" style="margin-top:.75rem"><a class="btn wa" href="https://wa.me/918296275406?text=Hi%20Jenny%27s%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.6 2.9 5.2 5.5 5.5l1.4-1.4-2-1-1 .8c-.9-.4-1.9-1.4-2.3-2.3l.8-1-1-2z"/></svg> Chat on WhatsApp</a></div></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer>
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 48 48" aria-hidden="true" style="width:2rem;height:2rem"><path d="M30 8V28C30 38 24 42 18 40C12 38 12 30 19 30C24 30 25 36 21 37" fill="none" stroke="#D9743F" stroke-width="3.6" stroke-linecap="round"/></svg>
+      <span>Jenny's Hair Studio</span>
+    </a>
+    <p>2nd Cross Rd, near Raghavendra Temple, Erappa Reddy Layout, Balaji Layout, Banaswadi, Bengaluru, Karnataka 560043. Phone 082962 75406. Details from the studio's Google Maps listing, checked 2 November 2026.</p>
+  </footer>
+</div>
+
+<a class="wa-fab" href="https://wa.me/918296275406?text=Hi%20Jenny%27s%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat with Jenny's Hair Studio on WhatsApp"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.6 2.9 5.2 5.5 5.5l1.4-1.4-2-1-1 .8c-.9-.4-1.9-1.4-2.3-2.3l.8-1-1-2z"/></svg></a>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var small = window.matchMedia('(max-width: 720px)').matches;
+  var art = document.querySelector('.hero-art');
+  var canvases = Array.prototype.slice.call(art.querySelectorAll('canvas'));
+  var copy = document.getElementById('heroCopy');
+  var PERIOD = 16; /* seconds; every strand uses whole-number cycles, so the loop is seamless */
+  var layers = [
+    { n: small ? 7 : 11, amp: 0.10, gap: 0.045, alpha: 0.30, lw: 1.0, m1: 1, m2: 2, k: 0.0042, parallax: 0.10 },
+    { n: small ? 6 : 9,  amp: 0.14, gap: 0.060, alpha: 0.50, lw: 1.4, m1: 1, m2: 1, k: 0.0058, parallax: 0.22 },
+    { n: small ? 4 : 6,  amp: 0.19, gap: 0.090, alpha: 0.85, lw: 2.2, m1: 2, m2: 1, k: 0.0036, parallax: 0.38 }
+  ];
+  var dpr = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
+  var sizes = [];
+
+  function resize() {
+    var r = art.getBoundingClientRect();
+    canvases.forEach(function (c, i) {
+      var w = Math.round(r.width), h = Math.round(r.height * 1.24);
+      c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+      sizes[i] = { w: w, h: h };
+    });
+  }
+
+  function draw(i, t) {
+    var c = canvases[i], L = layers[i], s = sizes[i];
+    if (!s) return;
+    var ctx = c.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, s.w, s.h);
+    var ph = (t / PERIOD) * Math.PI * 2;
+    var grad = ctx.createLinearGradient(0, 0, s.w, 0);
+    grad.addColorStop(0, '#7A56A0'); grad.addColorStop(0.5, '#D9743F'); grad.addColorStop(1, '#D9758F');
+    ctx.strokeStyle = grad; ctx.lineWidth = L.lw; ctx.lineCap = 'round';
+    var step = small ? 22 : 14;
+    for (var j = 0; j < L.n; j++) {
+      var base = s.h * (0.5 + (j - (L.n - 1) / 2) * L.gap);
+      ctx.globalAlpha = L.alpha * (0.55 + 0.45 * Math.sin(j * 1.7 + i));
+      ctx.beginPath();
+      for (var x = -20; x <= s.w + 20; x += step) {
+        var y = base
+          + L.amp * s.h * Math.sin(x * L.k + ph * L.m1 + j * 0.55)
+          + L.amp * 0.4 * s.h * Math.sin(x * L.k * 2.3 - ph * L.m2 + j * 0.9);
+        if (x === -20) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function frame(t) { for (var i = 0; i < canvases.length; i++) draw(i, t); }
+
+  var running = false, raf = 0, t0 = 0, visible = true;
+  function loop(now) {
+    if (!running) return;
+    frame(((now - t0) / 1000) % PERIOD);
+    raf = requestAnimationFrame(loop);
+  }
+  function start() {
+    if (running || reduce.matches || !visible || document.hidden) return;
+    running = true; t0 = performance.now(); raf = requestAnimationFrame(loop);
+  }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+
+  /* Scroll depth: transforms only, written once per frame */
+  var ticking = false;
+  function applyScroll() {
+    ticking = false;
+    var y = reduce.matches ? 0 : window.scrollY;
+    if (y > 1600) return;
+    canvases.forEach(function (c, i) { c.style.transform = 'translate3d(0,' + (y * layers[i].parallax).toFixed(1) + 'px,0)'; });
+    copy.style.transform = 'translate3d(0,' + (y * -0.06).toFixed(1) + 'px,0)';
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(applyScroll); } }, { passive: true });
+
+  function refresh() {
+    resize();
+    if (reduce.matches) { stop(); frame(PERIOD * 0.28); applyScroll(); }
+    else { frame(0); start(); applyScroll(); }
+  }
+  var rt;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(refresh, 150); });
+  if (reduce.addEventListener) reduce.addEventListener('change', refresh);
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(art);
+  }
+  refresh();
+
+  /* Gallery depth: each photo drifts at its own rate relative to the section centre */
+  var gal = document.getElementById('gallery');
+  var shots = Array.prototype.slice.call(gal.querySelectorAll('.shot'));
+  var gTick = false;
+  function galScroll() {
+    gTick = false;
+    if (reduce.matches) { shots.forEach(function (f) { f.style.transform = ''; }); return; }
+    var r = gal.getBoundingClientRect();
+    if (r.bottom < -200 || r.top > window.innerHeight + 200) return;
+    var d = r.top + r.height / 2 - window.innerHeight / 2;
+    shots.forEach(function (f) { f.style.transform = 'translate3d(0,' + (d * parseFloat(f.dataset.depth)).toFixed(1) + 'px,0)'; });
+  }
+  window.addEventListener('scroll', function () { if (!gTick) { gTick = true; requestAnimationFrame(galScroll); } }, { passive: true });
+  window.addEventListener('resize', galScroll);
+  if (reduce.addEventListener) reduce.addEventListener('change', galScroll);
+  galScroll();
+
+  /* Copy buttons (address, phone number) */
+  var ok = document.getElementById('copyOk');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy'), label = btn.getAttribute('data-label');
+      function fallback() {
+        var el = document.getElementById(btn.getAttribute('data-target'));
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        ok.textContent = label + ' selected. Copy it from your device menu.';
+      }
+      try {
+        navigator.clipboard.writeText(text).then(function () { ok.textContent = label + ' copied.'; }, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+
+<script>
+/* Booking picker. Booked times are kept by the studio in BOOKED below; today's earlier times grey out on their own. */
+(function () {
+  var BOOKED = {};            /* "YYYY-MM-DD": ["HH:MM", ...] marked taken by the studio */
+  var SLOTS = ["10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00"];
+  var CLOSED_WEEKDAYS = [];   /* 0 = Sunday ... 6 = Saturday */
+  var DAYS = 7, TZ = 'Asia/Kolkata', WA = '918296275406';
+  var daysEl = document.getElementById('days'), slotsEl = document.getElementById('slots');
+  var sum = document.getElementById('sum'), nameEl = document.getElementById('bkName'), link = document.getElementById('reqLink');
+  var state = { day: null, slot: null };
+
+  function istNow() {
+    var parts = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    var o = {}; parts.forEach(function (p) { o[p.type] = p.value; });
+    return { date: o.year + '-' + o.month + '-' + o.day, minutes: (+o.hour) * 60 + (+o.minute) };
+  }
+  function addDays(ds, n) { var d = new Date(ds + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+  function fmtDay(ds, opt) { return new Date(ds + 'T12:00:00Z').toLocaleDateString('en-IN', Object.assign({ timeZone: 'UTC' }, opt)); }
+  function fmtTime(t) { var h = +t.slice(0, 2), m = t.slice(3); return ((h + 11) % 12 + 1) + ':' + m + ' ' + (h < 12 ? 'am' : 'pm'); }
+  function toMin(t) { return (+t.slice(0, 2)) * 60 + (+t.slice(3)); }
+
+  function status(ds, t, now) {
+    var wd = new Date(ds + 'T12:00:00Z').getUTCDay();
+    if (CLOSED_WEEKDAYS.indexOf(wd) > -1) return 'closed';
+    if ((BOOKED[ds] || []).indexOf(t) > -1) return 'booked';
+    if (ds < now.date || (ds === now.date && toMin(t) <= now.minutes)) return 'passed';
+    return 'free';
+  }
+  function freeCount(ds, now) { return SLOTS.filter(function (t) { return status(ds, t, now) === 'free'; }).length; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function renderDays(now) {
+    daysEl.textContent = '';
+    for (var i = 0; i < DAYS; i++) {
+      (function (ds) {
+        var n = freeCount(ds, now);
+        var b = el('button', 'day'); b.type = 'button';
+        b.appendChild(el('span', null, i === 0 ? 'Today' : fmtDay(ds, { weekday: 'short' })));
+        b.appendChild(el('span', null, fmtDay(ds, { day: 'numeric', month: 'short' })));
+        b.appendChild(el('small', null, n ? n + ' free' : 'None left'));
+        b.disabled = n === 0;
+        b.setAttribute('aria-pressed', String(state.day === ds));
+        b.addEventListener('click', function () { state.day = ds; state.slot = null; render(); });
+        daysEl.appendChild(b);
+      })(addDays(now.date, i));
+    }
+  }
+  function renderSlots(now) {
+    slotsEl.textContent = '';
+    SLOTS.forEach(function (t) {
+      var st = status(state.day, t, now);
+      var b = el('button', 'slot'); b.type = 'button';
+      b.appendChild(el('span', 't', fmtTime(t)));
+      if (st !== 'free') b.appendChild(el('small', null, st === 'booked' ? 'Booked' : st === 'closed' ? 'Closed' : 'Passed'));
+      b.disabled = st !== 'free';
+      b.setAttribute('aria-pressed', String(state.slot === t));
+      b.setAttribute('aria-label', fmtTime(t) + (st === 'free' ? '' : ', ' + (st === 'booked' ? 'already booked' : st === 'closed' ? 'closed' : 'time has passed')));
+      b.addEventListener('click', function () { state.slot = t; render(); });
+      slotsEl.appendChild(b);
+    });
+  }
+  function service() { var r = document.querySelector('input[name="svc"]:checked'); return r ? r.value : 'a service'; }
+  function renderSummary() {
+    var name = nameEl.value.trim();
+    if (state.day && state.slot) {
+      sum.className = 'sum';
+      sum.textContent = fmtDay(state.day, { weekday: 'long', day: 'numeric', month: 'long' }) + ', ' + fmtTime(state.slot) + ' · ' + service();
+    } else { sum.className = 'sum empty'; sum.textContent = 'Pick a day and a time to continue.'; }
+    var ready = !!(state.day && state.slot && name);
+    link.setAttribute('aria-disabled', String(!ready));
+    link.tabIndex = ready ? 0 : -1;
+    if (ready) {
+      var msg = "Hi Jenny's Hair Studio, I'm " + name + '. I would like to book ' + service() + ' on ' + fmtDay(state.day, { weekday: 'long', day: 'numeric', month: 'long' }) + ' at ' + fmtTime(state.slot) + '. Is this time free?';
+      link.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    } else { link.href = '#book'; }
+  }
+  function render() {
+    var now = istNow();
+    if (state.day && freeCount(state.day, now) === 0) { state.day = null; state.slot = null; }
+    if (!state.day) {
+      for (var i = 0; i < DAYS; i++) { var ds = addDays(now.date, i); if (freeCount(ds, now)) { state.day = ds; break; } }
+    }
+    if (state.slot && status(state.day, state.slot, now) !== 'free') state.slot = null;
+    renderDays(now);
+    if (state.day) renderSlots(now); else slotsEl.textContent = 'No free times in the next ' + DAYS + ' days. Call 082962 75406 to ask.';
+    renderSummary();
+  }
+  link.addEventListener('click', function (e) { if (link.getAttribute('aria-disabled') === 'true') e.preventDefault(); });
+  nameEl.addEventListener('input', renderSummary);
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="svc"]'), function (r) { r.addEventListener('change', renderSummary); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) render(); });
+  render();
+})();
+</script>
+
+</body></html>
